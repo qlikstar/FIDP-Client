@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title th:text="${clientfqdn}" >Citrix Fingerprint IDP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/css/sticky-footer.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+        <a class="navbar-brand" href="#"><font color="#6495ed">Citrix Fingerprint IDP</font></a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        </div>
+    </nav>
+
+
+
+
+    <!-- Page Content -->
+    <!--<div class="alert alert-info" role="alert">-->
+    <div class="container"  >
+
+        <!-- Navigation -->
+        <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">-->
+            <!--<a class="navbar-brand" href="#">Fingerprint IDP - QR Code</a>-->
+        <!--</nav>-->
+
+        <!-- Heading Row -->
+        <div class="row my-4">
+            <!-- /.col-lg-8 -->
+            <div class="alert alert-info" role="alert"><h4>Hello,
+                <strong  th:text="${username}" ></strong>!</h4>
+                <br/> It looks like you have already signed in with us.
+            </div>
+            <div class="col-lg-2"/>
+            <div class="col-lg-8">
+                <br/>
+                <div class="alert alert-info" role="alert">
+                    Please check your <strong>FIDP registered device</strong> for login Notification!<br/>
+                    Here are the device details that you need to check: <br/>
+
+                </div>
+                <div>
+                    <div class="panel-body no-padding">
+                        <table class="table table-striped">
+                            <!--<thead>-->
+                            <!--<tr>-->
+                            <!--<th>Column Name</th>-->
+                            <!--<th>Column Value</th>-->
+                            <!--<th>Status</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <tbody>
+                            <tr>
+                                <td>Device Name</td>
+                                <td th:text="${deviceName}" ></td>
+                                <td><span class="label label-success">VERIFIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>IMEI Number</td>
+                                <td th:text="${imei}"></td>
+                                <td><span class="label label-success">VERIFIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>Device Id</td>
+                                <td th:text="${deviceId}"></td>
+                                <td><span class="label label-success">VERIFIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>Service Provider</td>
+                                <td>ATT</td>
+                                <td><span class="label label-warning">NOT VERIFIED</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-lg-2"/>
+                <!--<img  src="http://placehold.it/900x400" alt="">-->
+                <!--<img class="img-fluid rounded" th:src="${qrcode}" alt = "" height = "300" width = "300" />-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <br/><br/>
+    <!-- container -->
+    <div class="container" >
+        <div class="col-lg-2"/>
+
+        <div class="row">
+            <div class="col-xs-8">
+
+                <div class="progress progress-striped active" >
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2"/>
+    </div>
+    <!-- /.container -->
+    <br/>
+    <br/>
+    <!-- /.container -->
+    <!--</div>-->
+
+
+    <footer class="footer navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
+            <div class="container" align="center" >
+                <p class="text-muted" ><font color="#6495ed"><h4>Copyright &copy; Citrix Fingerprint IDP | 2017</h4></font></p>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="js/processing-intermediate.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="vendor/popper/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
